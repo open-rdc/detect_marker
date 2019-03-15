@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="uvc_camera" type="uvc_camera_node" name="uvc_camera" output="screen">
+  <param name="device" value="/dev/video1" />
+  <param name="width" type="int" value="160" />
+  <param name="height" type="int" value="120" />
+  <param name="fps" type="int" value="20" />
+  </node>
+
+  <node pkg="detect_marker" type="detect_marker.py" name="detect_marker" output="screen">
+  </node>
+
+</launch>
+
